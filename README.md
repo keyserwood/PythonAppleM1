@@ -1,5 +1,5 @@
 # PythonAppleM1
-Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advices require to have previously set up a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA). Having a functional python environment and data science compatible setup is touchy, and I have spent some times gathering data to create the following tutorial. I hope it will be useful 🤞
+Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advices require to have previously set up a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA). Having a functional python environment and data science compatible setup is touchy and I have spent some times gathering data to create the following tutorial. I hope it will be useful 🤞
 
 # 1. Install python via miniforge.
 
