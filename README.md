@@ -1,14 +1,14 @@
 # PythonAppleM1
-Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advice needs to have previously setup a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA). Having a functional python environement and data science compatible setup is quite long, and I spend some times gathering data to create the following tutorial. I hope it will be useful 🤞
+Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advices require to have previously set up a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA). Having a functional python environment and data science compatible setup is touchy, and I have spent some times gathering data to create the following tutorial. I hope it will be useful 🤞
 
 # 1. Install python via miniforge.
 
 ## 1.1. Install anaconda
 
-Miniforge provides a lightweight conda environment which has several advantages: Conda packaging manager, swithching python version effectively and so on. <br>
-What you want to do is install miniforge for your M1 chip (arm64 architecture). 
+Miniforge provides a lightweight conda environment which has several advantages: Conda packaging manager, switching python version effectively and so on. <br>
+What you want to do is install miniforge OSX_86-64. 
 You can download it [there](https://github.com/conda-forge/miniforge) <br>
-Go for : OS X	x86_64	Miniforge3-MacOSX-x86_64. Open your Rosetta terminal, and place in the folder containing this file.
+Go for : OS X	x86_64	Miniforge3-MacOSX-x86_64. Open your Rosetta terminal, and go to the folder containing this file.
 
 ```bash
 bash Miniforge3-MacOSX-x86_64.sh
@@ -25,17 +25,17 @@ conda install python=3.8.12
 
 > We can only access to python version equal or order to py 3.8. I recommand python 3.8.12 as it is a security version known to be reliable.
 
-You can know check that the python version has changed.
+You can check that the python version has changed.
 
 ```
 (base) python -V
 ```
 
-> (base) should appear next to your user name, as it refers to conda environment. 
+> (base) should appear next to your user name, as it refers to your conda environment. 
 
 ## 1.3. A Minimal Setup for Data science.
 
-As a data scientist, sometimes I have a csv files to analyze without wanting to create a virtual environment (even if it the pratice I use and recommend for bigger project). Big running the following command, you have all the essential package installed at once.
+As a data scientist, sometimes I have a csv files to analyze without wanting to create a virtual environment (even if it the pratice I use and recommend for bigger projects). By running the following command, you have all the essential packages installed at once.
 
 ```
 conda install pandas numpy numba matplotlib seaborn scikit-learn jupyter
@@ -49,7 +49,7 @@ conda install pandas numpy numba matplotlib seaborn scikit-learn jupyter
 conda install pipenv
 ```
 
-By doing so you are installing pipenv using conda. [Pipenv](https://pipenv.pypa.io/en/latest/) is the best way to integrate virtual development to your python practice. It enables you to create a minimal python environment with all the required package for your project (no more; no less🚀).
+By doing so you are installing pipenv using conda. [Pipenv](https://pipenv.pypa.io/en/latest/) is the best way to integrate virtual environment to your python practice. It enables you to create a minimal python environment with all the required package for your project (no more - no less🚀).
 
 ## 2.1. Create a new environment 
 
@@ -60,8 +60,8 @@ By doing so you are installing pipenv using conda. [Pipenv](https://pipenv.pypa.
 ```shell
 mkdir .venv
 ```
-* Pipenv recognize this folder and settle the venv in it
-* Know you can create the virtual environment
+* Pipenv recognizes this folder and settles the venv in it
+* Now you can create the virtual environment
 
 
 ```shell
@@ -76,11 +76,11 @@ pipenv shell --python 3.8.12 #As we said python 3.8.12 is secured & reliable
 pipenv install pandas
 ```
 
-> Use pipenv as pip --> Pipenv will install the package. It might take some time to lock the depencies
+> Use pipenv as pip --> Pipenv will install the package. It might take some time to lock the dependencies.
 
 ##### Several packages
 
-> Store all the packages in requirements.txt file (see on git repo)
+> Store all the packages in requirements.txt file.
 
 ```python
 pipenv install -r requirements.txt
@@ -89,8 +89,8 @@ pipenv install -r requirements.txt
 > Faster, better, stronger. 
 
 ## 2.2. Work with a PipFile
-* One can share its own pipenv to another by sharing PipFile. For setting, it is easy !
-  * It contains all the necessary packages, and it is really useful. To be more advance use [pipfile.lock](https://pipenv.pypa.io/en/latest/basics/#example-pipfile-pipfile-lock), which handles dependencies.
+* One can share its own pipenv to another by sharing PipFile!
+  * It contains all the necessary packages, and it is really useful. To be more advanced you can use [pipfile.lock](https://pipenv.pypa.io/en/latest/basics/#example-pipfile-pipfile-lock) which handles dependencies.
 ##### Create again .venv folder
 ```shell
 mkdir .venv
@@ -116,7 +116,7 @@ pipenv --rm
 
 # 3. Jupyter notebook setup
 
-Personnally, I love Jupyter notebook and I use it to try a lot of ideas - before writing .py files or just plotting data and so on. It is really great, however some functionalities 
+Personnally, I love Jupyter notebook and I use it to try a lot of ideas - before writing .py files or just plotting data and so on. It is a powerful tool, however some functionalities are not working on mac.
 
 ## 3.1. Run jupyter notebook with pipenv 
 
@@ -156,11 +156,11 @@ Once you have install nbextensions, restart your notebook to have changes, worki
 
 ![nbextensions](https://raw.githubusercontent.com/keyserwood/PythonAppleM1/main/images/nbextensions_home_page.png)
 
-For me I had the following [issue](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/issues/103), when going on Nbextensions module. Unchecking disable checkbox work.
+For me I had the following [issue](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/issues/103) when going to nbextensions module. Unchecking disable checkbox work.
 
 ### 3.2.4. Toggle comment
 
-Once you can access to nb extensions module, go to :
+Once you can access to nbextensions module go to :
 
 ![toggle_comment](https://raw.githubusercontent.com/keyserwood/PythonAppleM1/main/images/toggle_comment.png)
 
@@ -170,7 +170,7 @@ I recommand using : Ctrl-; as the shortcut for toggling comment has specific req
 
 Once you do that, it works and you can comment with the shortcut as you would do on Windows or Ubuntu. 
 
-#### :warning: If this tutorial is useful and helped you to gain precious time ⏱: feel free to buy me a coffee and dm for suggestions or data science/algo-trading projects 🚀
+#### :warning: If this tutorial is useful and helped you to save precious time ⏱: feel free to buy me a coffee and do not hesitate to dm for suggestions or data science/algo-trading projects 🚀
 
 ## Coffee time ☕️
 
