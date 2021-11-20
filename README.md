@@ -1,5 +1,5 @@
 # PythonAppleM1
-Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advice needs to have previously setup a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA).
+Python setup guide for new apple M1 MacBook Pro. The M1 chip is superb, however it leads to incompatibility and for the moment I do not recommend a python setup without rosetta. Hence, all the following advice needs to have previously setup a terminal with rosetta activated. If you do not know how to this, let's check this [tutorial](https://www.youtube.com/watch?v=9W8rTTE1WEA). Having a functional python environement and data science compatible setup is quite long, and I spend some times gathering data to create the following tutorial. Feel free to support me on : 
 
 # 1. Install python via miniforge.
 
@@ -28,10 +28,10 @@ conda install python=3.8.12
 You can know check that the python version has changed.
 
 ```
-python -V
+(base) python -V
 ```
 
-
+> (base) should appear next to your user name, as it refers to conda environment. 
 
 ## 1.3. A Minimal Setup for Data science.
 
@@ -116,3 +116,64 @@ pipenv --rm
 
 # 3. Jupyter notebook setup
 
+Personnally, I love Jupyter notebook and I use it to try a lot of ideas - before writing .py files or just plotting data and so on. It is really great, however some functionalities 
+
+## 3.1. Run jupyter notebook with pipenv 
+
+> Launch your virtual environment with *pipenv shell*. Check that you have (venv), meaning that you are in the virtual environment, in your folder.
+
+```
+(venv) user@macbook-pro folder pipenv run jupyter notebook
+```
+
+> pipenv run jupyter notebook, starts jupyter notebook within your virtual environment.
+
+## 3.2. Toggle comment
+
+Commenting cell with a shortcut is really key to boost your productivity and try different ideas quickly. On AZERTY keyboard, the shortcut : Cmd-/ is **not working**.
+
+This issue is quite common to non-us keyboard user. After trying several ways, I finally found a working one, with jupyter [nbextensions](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html).
+
+### 3.2.1. Install nbextensions for Jupiter.
+
+[Tutorial is here](https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html), and I recommend using conda
+
+```
+conda install -c conda-forge jupyter_contrib_nbextensions
+```
+
+### 3.2.2. Get rid of multiples warning.
+
+When launching jupyter notebook and opening a notebook, it could occurs to several warning in your [terminal](https://github.com/ipython-contrib/jupyter_contrib_nbextensions/issues/1529), fix it with:
+
+```
+conda install "nbconvert=5.6.1"
+```
+
+### 3.2.3. Use nb extensions
+
+Once you have install nbextensions, restart your notebook to have changes, working. You should be able to see an nbextensions menu on the home page:
+
+![nbextensions](/Users/elouan/Documents/TRADING/PythonAppleM1/nbextensions_home_page.png)
+
+For me I had the following [issue](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/issues/103), when going on Nbextensions module. Unchecking disable checkbox work.
+
+### 3.2.4. Toggle comment
+
+Once you can access to nb extensions module, go to :
+
+![toggle_comment](/Users/elouan/Documents/TRADING/PythonAppleM1/toggle_comment.png)
+
+> Enable the Comment/Uncomment Hotkey
+
+I recommand using : Ctrl-; as the shortcut for toggling comment has specific requirements regarding possible keys.
+
+Once you do that, it works and you can comment with the shortcut as you would do on Windows or Ubuntu. 
+
+#### :warning: If this tutorial is useful and helped you to gain precious time ⏱: feel free to buy me a coffee and dm for suggestions or data science/algo-trading projects 🚀
+
+## Coffee time ☕️
+
+TPnhs2NgW58vd5AcPwqwxE3GANoW4UWJmW [USDT - TRC20]
+
+<img src="/Users/elouan/Documents/TRADING/PythonAppleM1/Deposit_USDT.png" width=30%/>
