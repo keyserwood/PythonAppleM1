@@ -154,7 +154,7 @@ conda install "nbconvert=5.6.1"
 
 Once you have install nbextensions, restart your notebook to have changes, working. You should be able to see an nbextensions menu on the home page:
 
-![nbextensions](/Users/elouan/Documents/TRADING/PythonAppleM1/nbextensions_home_page.png)
+![nbextensions](https://raw.githubusercontent.com/keyserwood/PythonAppleM1/main/images/nbextensions_home_page.png)
 
 For me I had the following [issue](https://github.com/Jupyter-contrib/jupyter_nbextensions_configurator/issues/103), when going on Nbextensions module. Unchecking disable checkbox work.
 
@@ -162,9 +162,9 @@ For me I had the following [issue](https://github.com/Jupyter-contrib/jupyter_nb
 
 Once you can access to nb extensions module, go to :
 
-![toggle_comment](/Users/elouan/Documents/TRADING/PythonAppleM1/toggle_comment.png)
+![toggle_comment](https://raw.githubusercontent.com/keyserwood/PythonAppleM1/main/images/toggle_comment.png)
 
-> Enable the Comment/Uncomment Hotkey
+> Enable the Comment/Uncomment Hotkey extension.
 
 I recommand using : Ctrl-; as the shortcut for toggling comment has specific requirements regarding possible keys.
 
@@ -176,4 +176,4 @@ Once you do that, it works and you can comment with the shortcut as you would do
 
 TPnhs2NgW58vd5AcPwqwxE3GANoW4UWJmW [USDT - TRC20]
 
-<img src="/Users/elouan/Documents/TRADING/PythonAppleM1/Deposit_USDT.png" width=30%/>
+<img src="https://raw.githubusercontent.com/keyserwood/PythonAppleM1/main/images/Deposit_USDT.png" width=30%/>
