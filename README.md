@@ -88,6 +88,14 @@ pipenv install -r requirements.txt
 
 > Faster, better, stronger. 
 
+##### Your own project package
+> It is one for of my favorite practice to design and use my own packages thanks to __init__.py files.
+It will require a setup.py file before creating the venv.
+```python
+pipenv install -e
+```
+- This install the local package.
+
 ## 2.2. Work with a PipFile
 * One can share its own pipenv to another by sharing PipFile!
   * It contains all the necessary packages, and it is really useful. To be more advanced you can use [pipfile.lock](https://pipenv.pypa.io/en/latest/basics/#example-pipfile-pipfile-lock) which handles dependencies.
