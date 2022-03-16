@@ -92,7 +92,7 @@ pipenv install -r requirements.txt
 > It is one for of my favorite practice to design and use my own packages thanks to __init__.py files.
 It will require a setup.py file before creating the venv.
 ```python
-pipenv install -e
+pipenv install -e.
 ```
 - This install the local package.
 
